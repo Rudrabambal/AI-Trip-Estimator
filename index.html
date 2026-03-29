@@ -129,7 +129,8 @@
                 <input type="date" id="endDate" class="form-select" />
               </div>
             </div>
-            <div id="dateCalcResult" style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted); font-weight: 600; display: flex; gap: 8px; align-items: center;">
+            <div id="dateCalcResult"
+              style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted); font-weight: 600; display: flex; gap: 8px; align-items: center;">
               <i data-lucide="clock" style="width: 14px; height: 14px;"></i>
               <span id="calculatedDuration">4 Nights / 5 Days</span>
             </div>
@@ -283,21 +284,21 @@
             <input type="radio" name="tripStyle" value="60" />
             <div class="style-box">
               <span class="style-name">2 Star</span>
-              <span class="style-desc">Economy</span>
+              <span class="style-desc">Premium Economy</span>
             </div>
           </label>
           <label class="style-option">
             <input type="radio" name="tripStyle" value="80" checked />
             <div class="style-box">
               <span class="style-name">3 Star</span>
-              <span class="style-desc">Standard</span>
+              <span class="style-desc">Luxury</span>
             </div>
           </label>
           <label class="style-option">
             <input type="radio" name="tripStyle" value="100" />
             <div class="style-box">
               <span class="style-name">5 Star</span>
-              <span class="style-desc">Luxury</span>
+              <span class="style-desc">Premium Luxury</span>
             </div>
           </label>
         </div>
@@ -321,7 +322,10 @@
           <i data-lucide="sparkles" class="btn-icon"></i>
           Estimate Cost
         </button>
-        <button id="resetBtn" style="flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: transparent; border: 1.5px solid var(--border); color: var(--text-main); border-radius: 50px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all var(--transition);" onmouseover="this.style.borderColor='var(--coral)'; this.style.color='var(--coral)';" onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text-main)';">
+        <button id="resetBtn"
+          style="flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: transparent; border: 1.5px solid var(--border); color: var(--text-main); border-radius: 50px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all var(--transition);"
+          onmouseover="this.style.borderColor='var(--coral)'; this.style.color='var(--coral)';"
+          onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text-main)';">
           <i data-lucide="rotate-ccw" class="btn-icon"></i>
           Reset
         </button>
