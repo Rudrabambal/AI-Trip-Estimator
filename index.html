@@ -299,11 +299,17 @@
         </label>
       </div>
 
-      <!-- ── Estimate Button ── -->
-      <button class="btn-estimate" id="estimateBtn">
-        <i data-lucide="sparkles" class="btn-icon"></i>
-        Estimate Cost
-      </button>
+      <!-- ── Estimate Buttons ── -->
+      <div style="display: flex; gap: 16px; margin-top: 10px;">
+        <button class="btn-estimate" id="estimateBtn" style="flex: 2;">
+          <i data-lucide="sparkles" class="btn-icon"></i>
+          Estimate Cost
+        </button>
+        <button id="resetBtn" style="flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: transparent; border: 1.5px solid var(--border); color: var(--text-main); border-radius: 50px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all var(--transition);" onmouseover="this.style.borderColor='var(--coral)'; this.style.color='var(--coral)';" onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text-main)';">
+          <i data-lucide="rotate-ccw" class="btn-icon"></i>
+          Reset
+        </button>
+      </div>
     </div>
 
     <!-- ═══ OUTPUT SECTION ═══ -->

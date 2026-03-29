@@ -135,6 +135,7 @@ const seniorsDec = $("decreaseSeniors");
 const seniorsVal = $("seniorsValue");
 
 const estimateBtn = $("estimateBtn");
+const resetBtn = $("resetBtn");
 const outputSection = $("outputSection");
 const loadingState = $("loadingState");
 const resultsGrid = $("resultsGrid");
@@ -213,8 +214,50 @@ function init() {
   initDestPlanBtns();
   
   estimateBtn.addEventListener("click", handleEstimate);
+  if (resetBtn) resetBtn.addEventListener("click", handleReset);
   comparePlans.addEventListener("change", toggleCompareCards);
   $("toggleAllMeals").addEventListener("click", handleToggleAllMeals);
+}
+
+function handleReset() {
+  $("destination").value = "";
+  initDates();
+  adultsVal.textContent = "2";
+  kidsVal.textContent = "0";
+  seniorsVal.textContent = "0";
+  totalVal.textContent = "2";
+  $("hotelType").value = "3star";
+  $("foodType").value = "nonveg";
+  
+  ["Breakfast", "Lunch", "Dinner"].forEach((meal) => {
+    $("meal" + meal).checked = true;
+    $("toggle" + meal).classList.add("active");
+  });
+  $("mealBrunch").checked = false;
+  $("toggleBrunch").classList.remove("active");
+  
+  const toggleBtn = $("toggleAllMeals");
+  if (toggleBtn) toggleBtn.textContent = "Select All";
+  
+  const tripStyles = document.querySelectorAll('input[name="tripStyle"]');
+  tripStyles.forEach(ts => {
+    ts.checked = (ts.value === "50");
+  });
+  
+  comparePlans.checked = false;
+  outputSection.classList.remove("visible");
+  resultsGrid.classList.remove("visible");
+  
+  // reset flair
+  const flairBox = $("destFlair");
+  const plannerSection = document.querySelector('.planner-section');
+  if (flairBox) flairBox.style.display = 'none';
+  if (plannerSection) {
+    plannerSection.style.backgroundImage = 'none';
+    plannerSection.classList.remove('has-bg');
+  }
+  
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // ════════════════════════════════════════
