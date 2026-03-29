@@ -32,19 +32,19 @@ setInterval(rotateTagline, 3000);
 
 const HOTEL_RATES = {
   // Daily cost per person in INR
-  Goa: { "5star": 7500, "3star": 3800, "2star": 2200, "budget": 1100, "dormitory": 550 },
-  Manali: { "5star": 6500, "3star": 3200, "2star": 1900, "budget": 950, "dormitory": 450 },
-  Kerala: { "5star": 8500, "3star": 4200, "2star": 2600, "budget": 1250, "dormitory": 600 },
-  Jaipur: { "5star": 7000, "3star": 3500, "2star": 2000, "budget": 1000, "dormitory": 500 },
-  Dubai: { "5star": 22000, "3star": 11000, "2star": 7500, "budget": 4500, "dormitory": 2500 },
-  Leh: { "5star": 8000, "3star": 4000, "2star": 2500, "budget": 1200, "dormitory": 600 },
-  Rishikesh: { "5star": 9000, "3star": 3500, "2star": 1800, "budget": 800, "dormitory": 400 },
-  Darjeeling: { "5star": 7500, "3star": 3500, "2star": 2000, "budget": 1000, "dormitory": 500 },
-  Andaman: { "5star": 12000, "3star": 6000, "2star": 3500, "budget": 1800, "dormitory": 800 },
-  Varanasi: { "5star": 6500, "3star": 3000, "2star": 1500, "budget": 800, "dormitory": 350 },
-  Kutch: { "5star": 9500, "3star": 4500, "2star": 2800, "budget": 1500, "dormitory": 800 },
-  Bali: { "5star": 15000, "3star": 6500, "2star": 3000, "budget": 1500, "dormitory": 600 },
-  Delhi: { "5star": 11000, "3star": 4000, "2star": 2200, "budget": 1000, "dormitory": 500 },
+  Goa: { "5star": 7500, "3star": 3800, "2star": 2200, "basic_premium": 1600, "budget": 1100, "dormitory": 550 },
+  Manali: { "5star": 6500, "3star": 3200, "2star": 1900, "basic_premium": 1400, "budget": 950, "dormitory": 450 },
+  Kerala: { "5star": 8500, "3star": 4200, "2star": 2600, "basic_premium": 1900, "budget": 1250, "dormitory": 600 },
+  Jaipur: { "5star": 7000, "3star": 3500, "2star": 2000, "basic_premium": 1500, "budget": 1000, "dormitory": 500 },
+  Dubai: { "5star": 22000, "3star": 11000, "2star": 7500, "basic_premium": 6000, "budget": 4500, "dormitory": 2500 },
+  Leh: { "5star": 8000, "3star": 4000, "2star": 2500, "basic_premium": 1800, "budget": 1200, "dormitory": 600 },
+  Rishikesh: { "5star": 9000, "3star": 3500, "2star": 1800, "basic_premium": 1300, "budget": 800, "dormitory": 400 },
+  Darjeeling: { "5star": 7500, "3star": 3500, "2star": 2000, "basic_premium": 1500, "budget": 1000, "dormitory": 500 },
+  Andaman: { "5star": 12000, "3star": 6000, "2star": 3500, "basic_premium": 2600, "budget": 1800, "dormitory": 800 },
+  Varanasi: { "5star": 6500, "3star": 3000, "2star": 1500, "basic_premium": 1100, "budget": 800, "dormitory": 350 },
+  Kutch: { "5star": 9500, "3star": 4500, "2star": 2800, "basic_premium": 2100, "budget": 1500, "dormitory": 800 },
+  Bali: { "5star": 15000, "3star": 6500, "2star": 3000, "basic_premium": 2200, "budget": 1500, "dormitory": 600 },
+  Delhi: { "5star": 11000, "3star": 4000, "2star": 2200, "basic_premium": 1600, "budget": 1000, "dormitory": 500 },
 };
 
 const FOOD_RATES = {
@@ -254,7 +254,7 @@ function handleReset() {
   
   const tripStyles = document.querySelectorAll('input[name="tripStyle"]');
   tripStyles.forEach(ts => {
-    ts.checked = (ts.value === "50");
+    ts.checked = (ts.value === "80");
   });
   
   comparePlans.checked = false;
@@ -564,7 +564,7 @@ function renderTotalCard(costs, dest, nights, days, adults, kids, seniors, hotel
 }
 
 function hotelLabel(key) {
-  return { "5star": "5-Star", "3star": "3-Star", "2star": "2-Star", "budget": "Budget", "dormitory": "Dormitory" }[key] ?? key;
+  return { "5star": "5-Star", "3star": "3-Star", "2star": "2-Star", "basic_premium": "Basic Premium", "budget": "Budget", "dormitory": "Dormitory" }[key] ?? key;
 }
 
 function renderChart(costs) {
@@ -631,11 +631,13 @@ function renderInsights(dest, hotel, days, luxuryMult) {
   }
 
   if (hotel === "dormitory" || hotel === "budget") {
-    insights.push({ type: "tip", icon: "💡", text: "Budget accommodation is a smart choice. Consider 2-star hotels for a moderate upgrade with much better amenities." });
-  } else if (hotel === "3star") {
-    insights.push({ type: "info", icon: "⭐", text: "3-star hotels offer the best value-for-money. You get comfort without the premium price tag." });
+    insights.push({ type: "tip", icon: "💡", text: "Budget choice is great! Consider 'Basic Premium' for a significant comfort boost at a very small price increase." });
+  } else if (hotel === "basic_premium") {
+    insights.push({ type: "tip", icon: "✨", text: "Basic Premium is the ultimate sweet spot. You get sanitized, comfortable rooms that are much better than budget but half the price of 3-star." });
+  } else if (hotel === "3star" || hotel === "2star") {
+    insights.push({ type: "info", icon: "⭐", text: "Standard hotels offer reliable comfort. Switching to Basic Premium can save you ~20% without losing essential comfort." });
   } else if (hotel === "5star") {
-    insights.push({ type: "warn", icon: "💎", text: "5-star stay significantly increases your budget. Dropping to 3-star can save 40–50% on accommodation." });
+    insights.push({ type: "warn", icon: "💎", text: "5-star stay significantly increases your budget. Dropping to 3-star or 2-star can save 50%+ on accommodation." });
   }
 
   if (days > 10) {
@@ -658,7 +660,7 @@ function renderSuggestions(costs, dest, nights, days, adults, kids, seniors, hot
   const suggestions = [];
 
   // Suggest cheaper hotel
-  const hotelOrder = ["5star", "3star", "2star", "budget", "dormitory"];
+  const hotelOrder = ["5star", "3star", "2star", "basic_premium", "budget", "dormitory"];
   const hotelIdx = hotelOrder.indexOf(hotel);
   if (hotelIdx < hotelOrder.length - 1) {
     const cheaperHotel = hotelOrder[hotelIdx + 1];

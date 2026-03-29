@@ -191,11 +191,12 @@
             </label>
             <div class="select-wrapper">
               <select id="hotelType" class="form-select">
-                <option value="5star">⭐⭐⭐⭐⭐ 5-Star</option>
-                <option value="3star" selected>⭐⭐⭐ 3-Star</option>
-                <option value="2star">⭐⭐ 2-Star</option>
-                <option value="budget">🏠 Budget</option>
-                <option value="dormitory">🛏️ Dormitory</option>
+                <option value="5star">⭐⭐⭐⭐⭐ 5-Star (Luxury)</option>
+                <option value="3star" selected>⭐⭐⭐ 3-Star (Mid-range)</option>
+                <option value="2star">⭐⭐ 2-Star (Economy)</option>
+                <option value="basic_premium">✨ Basic Premium (Comfort Value)</option>
+                <option value="budget">🏠 Budget (Essentials)</option>
+                <option value="dormitory">🛏️ Doms (Hostel/Shared)</option>
               </select>
             </div>
           </div>
@@ -260,36 +261,43 @@
           <label class="style-option">
             <input type="radio" name="tripStyle" value="0" />
             <div class="style-box">
+              <span class="style-name">Doms</span>
+              <span class="style-desc">Social Hostels</span>
+            </div>
+          </label>
+          <label class="style-option">
+            <input type="radio" name="tripStyle" value="20" />
+            <div class="style-box">
               <span class="style-name">Budget</span>
-              <span class="style-desc">Basic / Dorms</span>
+              <span class="style-desc">Low Cost</span>
             </div>
           </label>
           <label class="style-option">
-            <input type="radio" name="tripStyle" value="25" />
+            <input type="radio" name="tripStyle" value="40" />
             <div class="style-box">
-              <span class="style-name">Economy</span>
-              <span class="style-desc">2-Star / Local</span>
+              <span class="style-name">Basic Premium</span>
+              <span class="style-desc">Comfort Plus</span>
             </div>
           </label>
           <label class="style-option">
-            <input type="radio" name="tripStyle" value="50" checked />
+            <input type="radio" name="tripStyle" value="60" />
             <div class="style-box">
-              <span class="style-name">Value</span>
-              <span class="style-desc">3-Star / Balanced</span>
+              <span class="style-name">2 Star</span>
+              <span class="style-desc">Economy</span>
             </div>
           </label>
           <label class="style-option">
-            <input type="radio" name="tripStyle" value="75" />
+            <input type="radio" name="tripStyle" value="80" checked />
             <div class="style-box">
-              <span class="style-name">Premium</span>
-              <span class="style-desc">4-Star / Private</span>
+              <span class="style-name">3 Star</span>
+              <span class="style-desc">Standard</span>
             </div>
           </label>
           <label class="style-option">
             <input type="radio" name="tripStyle" value="100" />
             <div class="style-box">
-              <span class="style-name">Luxury</span>
-              <span class="style-desc">5-Star / VIP</span>
+              <span class="style-name">5 Star</span>
+              <span class="style-desc">Luxury</span>
             </div>
           </label>
         </div>
