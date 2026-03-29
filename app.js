@@ -169,7 +169,7 @@ const DEST_FLAIR = {
   "Jaipur":    { quote: "Padharo Mhare Des",                tagline: "Welcome to the Royal Pink City 🏰",             bg: "https://images.unsplash.com/photo-1477587458883-47145ed94245?w=1600&q=80" },
   "Dubai":     { quote: "Marhaba!",                         tagline: "Luxury meets the Desert dunes 🌆",               bg: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1600&q=80" },
   "Leh":       { quote: "Julley!",                          tagline: "Breathtaking altitudes and monasteries 🛵",       bg: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80" },
-  "Rishikesh": { quote: "Om Shanti",                        tagline: "The Yoga Capital of the World 🧘",                bg: "https://images.unsplash.com/photo-1584535789935-b28c67c16e8a?w=1600&q=80" },
+  "Rishikesh": { quote: "Om Shanti",                        tagline: "The Yoga Capital of the World 🧘",                bg: "https://images.unsplash.com/photo-1545105597-401456a92843?w=1600&q=90" },
   "Darjeeling":{ quote: "Queen of the Hills",               tagline: "Tea gardens and Kanchenjunga views 🚂",           bg: "https://images.unsplash.com/photo-1544256221-a3f2db014af1?w=1600&q=80" },
   "Andaman":   { quote: "Tropical Paradise",                tagline: "Crystal clear waters and coral reefs 🐠",         bg: "https://images.unsplash.com/photo-1589135398309-1723c3b1424b?w=1600&q=90" },
   "Varanasi":  { quote: "City of Light",                    tagline: "The spiritual heart of India 🕉️",                bg: "https://images.unsplash.com/photo-1590050752117-2346761001bc?w=1600&q=90" },
