@@ -153,7 +153,7 @@ const DEST_FLAIR = {
   "Manali": {
     quote: "Valley of Gods",
     tagline: "Adventure awaits in the Himalayas 🏔️",
-    bg: "https://images.unsplash.com/photo-1605649487212-4dcb1b6b5df6?w=1600&q=80"
+    bg: "https://images.unsplash.com/photo-1548013146-72479768bada?w=1600&q=80"
   },
   "Kerala": {
     quote: "Namaskaram",
