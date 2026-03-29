@@ -163,39 +163,19 @@ const compareCards = $("compareCards");
 // ════════════════════════════════════════
 // DESTINATION FLAIR DATA
 const DEST_FLAIR = {
-  "Goa": {
-    quote: "Susegad!",
-    tagline: "The Goan art of relaxed living 🏖️",
-    bg: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1600&q=80"
-  },
-  "Manali": {
-    quote: "Valley of Gods",
-    tagline: "Adventure awaits in the Himalayas 🏔️",
-    bg: "https://images.unsplash.com/photo-1548013146-72479768bada?w=1600&q=80"
-  },
-  "Kerala": {
-    quote: "Namaskaram",
-    tagline: "Peace in God's Own Country 🌴",
-    bg: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1600&q=80"
-  },
-  "Jaipur": {
-    quote: "Padharo Mhare Des",
-    tagline: "Welcome to the Royal Pink City 🏰",
-    bg: "https://images.unsplash.com/photo-1477587458883-47145ed94245?w=1600&q=80"
-  },
-  "Dubai": {
-    quote: "Marhaba!",
-    tagline: "Luxury meets the Desert dunes 🌆",
-    bg: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1600&q=80"
-  },
-  "Leh": { quote: "Julley!", tagline: "Breathtaking altitudes and ancient monasteries 🛵", bg: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1600&q=80" },
-  "Rishikesh": { quote: "Om Shanti", tagline: "The Yoga Capital and River Rapids 🧘", bg: "https://images.unsplash.com/photo-1600378413926-ab8c0a373cb7?w=1600&q=80" },
-  "Darjeeling": { quote: "Queen of the Hills", tagline: "Tea gardens and the Kanchenjunga 🚂", bg: "https://images.unsplash.com/photo-1544256221-a3f2db014af1?w=1600&q=80" },
-  "Andaman": { quote: "Tropical Paradise", tagline: "Crystal clear waters and coral reefs 🐠", bg: "https://images.unsplash.com/photo-1588629000854-aa6a2e4fe5ee?w=1600&q=80" },
-  "Varanasi": { quote: "City of Light", tagline: "The spiritual heart of India 🕉️", bg: "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=1600&q=80" },
-  "Kutch": { quote: "Kutch Nahi Dekha, Toh Kuch Nahi Dekha", tagline: "The surreal White Desert festival 🏜️", bg: "https://images.unsplash.com/photo-1605387431326-0e1ceaa96845?w=1600&q=80" },
-  "Bali": { quote: "Island of the Gods", tagline: "Tropical beaches and lush rice terraces 🌺", bg: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1600&q=80" },
-  "Delhi": { quote: "Dilwalon ki Dilli", tagline: "Historic avenues and the majestic Taj Mahal 🏛️", bg: "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1600&q=80" },
+  "Goa":       { quote: "Susegad!",                         tagline: "The Goan art of relaxed living 🏖️",              bg: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1600&q=80" },
+  "Manali":    { quote: "Valley of Gods",                   tagline: "Adventure awaits in the Himalayas 🏔️",          bg: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80" },
+  "Kerala":    { quote: "Namaskaram",                       tagline: "Peace in God's Own Country 🌴",                 bg: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1600&q=80" },
+  "Jaipur":    { quote: "Padharo Mhare Des",                tagline: "Welcome to the Royal Pink City 🏰",             bg: "https://images.unsplash.com/photo-1477587458883-47145ed94245?w=1600&q=80" },
+  "Dubai":     { quote: "Marhaba!",                         tagline: "Luxury meets the Desert dunes 🌆",               bg: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1600&q=80" },
+  "Leh":       { quote: "Julley!",                          tagline: "Breathtaking altitudes and monasteries 🛵",       bg: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80" },
+  "Rishikesh": { quote: "Om Shanti",                        tagline: "The Yoga Capital of the World 🧘",                bg: "https://images.unsplash.com/photo-1584535789935-b28c67c16e8a?w=1600&q=80" },
+  "Darjeeling":{ quote: "Queen of the Hills",               tagline: "Tea gardens and Kanchenjunga views 🚂",           bg: "https://images.unsplash.com/photo-1544256221-a3f2db014af1?w=1600&q=80" },
+  "Andaman":   { quote: "Tropical Paradise",                tagline: "Crystal clear waters and coral reefs 🐠",         bg: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1600&q=80" },
+  "Varanasi":  { quote: "City of Light",                    tagline: "The spiritual heart of India 🕉️",                bg: "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=1600&q=80" },
+  "Kutch":     { quote: "Kutch Nahi Dekha Toh Kuch Nahi",   tagline: "The surreal White Desert of Gujarat 🏜️",       bg: "https://images.unsplash.com/photo-1519922639192-e73293ca430e?w=1600&q=80" },
+  "Bali":      { quote: "Island of the Gods",               tagline: "Tropical beaches and lush rice terraces 🌺",    bg: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1600&q=80" },
+  "Delhi":     { quote: "Dilwalon ki Dilli",                tagline: "Historic avenues and the Taj Mahal 🏛️",         bg: "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=1600&q=80" },
 };
 
 function initDestinationFlair() {

@@ -444,6 +444,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  transition: background-image 0.5s ease;
 }
 
 .planner-section::before {
@@ -455,10 +456,12 @@ body {
   transition: background var(--transition);
 }
 
+.planner-section.has-bg {
+  filter: brightness(1.15) saturate(1.2);
+}
+
 .planner-section.has-bg::before {
-  background: rgba(255, 255, 255, 0.35); /* Brighter, elegant overlay for images */
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(10, 15, 30, 0.38); /* Much lighter overlay — shows the image vividly */
 }
 
 .planner-section > .container {
