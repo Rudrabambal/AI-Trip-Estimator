@@ -221,7 +221,14 @@ function init() {
 
 function handleReset() {
   $("destination").value = "";
-  initDates();
+  
+  // Clear dates instead of resetting to today
+  if ($("startDate")) $("startDate").value = "";
+  if ($("endDate")) $("endDate").value = "";
+  if ($("calculatedDuration")) $("calculatedDuration").textContent = "Select dates";
+  calculatedNights = 4; // Reset internal values for safe fallbacks
+  calculatedDays = 5;
+  
   adultsVal.textContent = "2";
   kidsVal.textContent = "0";
   seniorsVal.textContent = "0";
